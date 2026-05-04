@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Jasa Desain Poster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd6e7, #ffeaf4);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4d88;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #ff4d88;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff1a66;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 15px;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Order Poster 🎨</h1>
+
+  <label>Nama</label>
+  <input type="text" id="nama" placeholder="Nama kamu">
+
+  <label>Jenis Poster</label>
+  <select id="jenis">
+    <option>Poster Tugas Sekolah</option>
+    <option>Poster Event</option>
+    <option>Poster Promosi</option>
+    <option>atau yang lainnya... bisa di tulis di deskripsi</option>
+  </select>
+
+  <label>Deskripsi</label>
+  <textarea id="deskripsi" rows="4" placeholder="Jelaskan konsep poster..."></textarea>
+
+  <label>Deadline</label>
+  <input type="date" id="deadline">
+
+  <button onclick="kirimWA()">Pesan Sekarang</button>
+
+  <div class="footer">
+    Fast respon via WhatsApp 🚀
+  </div>
+</div>
+
+<script>
+function kirimWA() {
+  let nama = document.getElementById("nama").value;
+  let jenis = document.getElementById("jenis").value;
+  let deskripsi = document.getElementById("deskripsi").value;
+  let deadline = document.getElementById("deadline").value;
+
+  if(nama === "" || deskripsi === "" || deadline === "") {
+    alert("Isi dulu yang lengkap ya 😑");
+    return;
+  }
+
+  let nomor = "6285166880852"; // GANTI DENGAN NOMOR WA KAMU
+
+  let pesan = `Halo, saya mau pesan desain poster%0A
+Nama: ${nama}%0A
+Jenis: ${jenis}%0A
+Deskripsi: ${deskripsi}%0A
+Deadline: ${deadline}`;
+
+  let url = `https://wa.me/${6285166880852}?text=${Halo saya ingin pesan jasa desain poster}`;
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
